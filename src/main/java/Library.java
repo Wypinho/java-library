@@ -26,4 +26,12 @@ public class Library {
         }
         return false;
     }
+
+    public void lend(Borrower borrower) {
+        if (this.collection.size() > 0) {
+            Book book = this.collection.remove(0);
+            borrower.addBook(book);
+        }
+
+    }
 }
