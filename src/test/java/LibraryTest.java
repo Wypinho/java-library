@@ -40,4 +40,11 @@ public class LibraryTest {
         assertEquals(1, borrower.bookCount());
     }
 
+    @Test
+    public void libraryCantLendIfNoBooks(){
+        library.lend(borrower);
+        assertEquals(0, library.collectionCount());
+        assertEquals(0, borrower.bookCount());
+    }
+
 }
